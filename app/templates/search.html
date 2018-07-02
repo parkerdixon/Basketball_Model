@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+  <div>
+    <h2>
+      Player Search
+    </h2>
+<form action="/player-plot" method="post">
+  <input list="players" name="playername">
+  <datalist id="players">
+    {% for player in players %}
+    <option value="{{ player }}">
+    {% endfor %}
+  </datalist>
+  <input type="submit">
+</form>
+<br>
+<div>
+  <a  href="{{ url_for('init_home', _external=True) }}">Return Home</a>
+</div>
+</body>
+</html>

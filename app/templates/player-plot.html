@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Player Page</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+<h2>2018 Projection Page</h2>
+<h3>Predicted Stats</h3>
+<img src="data:image/png;base64, {{ plot_url }}" width="1700" height="850" alt="graph">
+<br>
+<h3>Most Similar Players</h3>
+<div>
+    {% for table in tables %}
+      <br>
+      {{ table|safe }}
+    {% endfor %}
+    <img src="data:image/png;base64, {{ sim_url }}" width="1300" height="1300" alt="graph">
+    <div>
+      <a  href="{{ url_for('search_page', _external=True) }}">Search for Another Player</a><br>
+      <a  href="{{ url_for('init_home', _external=True) }}">Return Home</a>
+    </div>
+</div>

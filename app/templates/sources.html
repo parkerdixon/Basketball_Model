@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">About</h1><br>
+      <h3>Methods and Sources</h3>
+      <div class="container">
+        All data scraped from the below sites using the <a href="https://www.crummy.com/software/BeautifulSoup">Beautiful Soup</a>
+        package in Python and analyzed using the <a href="http://scikit-learn.org/stable/">Sci-Kit Learn</a> Package
+        <nav>
+          <br>
+          <ul class="menu">
+            <li><a href="https://www.basketball-reference.com/">Basketball Reference</a></li><br>
+            <li><a href="https://www.sports-reference.com/cbb/">Sports Reference - College Basketball</a></li>
+          </ul><br>
+        </nav></strong>
+      </div>
+      <h3>More info:</h3>
+        Email me <a href="mailto:parkerjamesdixon@gmail.com">here</a> and check out <a href="https://parkerdixon.github.io">my data science blog</a>!
+    </header>
+    <br>
+    <div>
+      <a  href="{{ url_for('search_page', _external=True) }}">Search for a Player</a><br>
+      <a  href="{{ url_for('init_home', _external=True) }}">Return Home</a>
+    </div>
+  </body>
+
+</html>
